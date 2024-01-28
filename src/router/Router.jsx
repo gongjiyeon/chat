@@ -1,15 +1,13 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./Home";
-import SignIn from "./SignIn";
-import ChatRoom from "../component/ChatRoom";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import SignIn from './SignIn';
+import MainLayout from './MainLayout';
 
 function Router() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="*" element={<Home />}></Route>
-        <Route path="/signIn" element={<SignIn />}></Route>
-        <Route path={`/chatRoom/:index`} element={<ChatRoom />}></Route>
+        <Route path='*' element={<MainLayout />}></Route>
+        <Route path='/signIn' element={<SignIn />}></Route>
       </Routes>
     </BrowserRouter>
   );
